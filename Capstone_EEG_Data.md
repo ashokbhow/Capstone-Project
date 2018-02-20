@@ -1049,3 +1049,718 @@ Epi_X100
     518
 
 
+
+
+```python
+# Regrouping the data in terms of class variables
+cls = eeg.groupby('y')
+```
+
+
+```python
+# mean values of individual class
+Mean = cls.mean()
+```
+
+
+```python
+# standard dviation of individual class
+Std = cls.std()
+```
+
+
+```python
+Mean
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>X3</th>
+      <th>X4</th>
+      <th>X5</th>
+      <th>X6</th>
+      <th>X7</th>
+      <th>X8</th>
+      <th>X9</th>
+      <th>X10</th>
+      <th>...</th>
+      <th>X169</th>
+      <th>X170</th>
+      <th>X171</th>
+      <th>X172</th>
+      <th>X173</th>
+      <th>X174</th>
+      <th>X175</th>
+      <th>X176</th>
+      <th>X177</th>
+      <th>X178</th>
+    </tr>
+    <tr>
+      <th>y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>-21.936522</td>
+      <td>-19.049130</td>
+      <td>-15.293913</td>
+      <td>-9.836087</td>
+      <td>-3.707391</td>
+      <td>2.730000</td>
+      <td>6.899565</td>
+      <td>7.425652</td>
+      <td>8.380870</td>
+      <td>10.773913</td>
+      <td>...</td>
+      <td>-7.266522</td>
+      <td>-9.714783</td>
+      <td>-15.909565</td>
+      <td>-22.383043</td>
+      <td>-26.424783</td>
+      <td>-26.221739</td>
+      <td>-25.830870</td>
+      <td>-25.043913</td>
+      <td>-24.548261</td>
+      <td>-24.016522</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-7.710000</td>
+      <td>-8.148696</td>
+      <td>-8.020000</td>
+      <td>-8.050435</td>
+      <td>-7.776957</td>
+      <td>-8.220870</td>
+      <td>-8.597826</td>
+      <td>-9.210000</td>
+      <td>-9.217826</td>
+      <td>-9.347826</td>
+      <td>...</td>
+      <td>-7.979565</td>
+      <td>-8.483043</td>
+      <td>-8.967391</td>
+      <td>-9.067391</td>
+      <td>-8.924783</td>
+      <td>-8.592174</td>
+      <td>-8.524348</td>
+      <td>-8.558696</td>
+      <td>-8.187391</td>
+      <td>-8.147391</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-9.207391</td>
+      <td>-9.276522</td>
+      <td>-9.968261</td>
+      <td>-10.634348</td>
+      <td>-11.172174</td>
+      <td>-11.559130</td>
+      <td>-11.797826</td>
+      <td>-12.013043</td>
+      <td>-12.132609</td>
+      <td>-12.249130</td>
+      <td>...</td>
+      <td>-13.590000</td>
+      <td>-13.332174</td>
+      <td>-13.218696</td>
+      <td>-12.789565</td>
+      <td>-12.366087</td>
+      <td>-11.320000</td>
+      <td>-10.455217</td>
+      <td>-9.757391</td>
+      <td>-9.418696</td>
+      <td>-8.935217</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-12.726087</td>
+      <td>-12.410435</td>
+      <td>-12.272609</td>
+      <td>-12.096957</td>
+      <td>-12.083043</td>
+      <td>-12.349130</td>
+      <td>-13.064348</td>
+      <td>-13.419565</td>
+      <td>-13.441739</td>
+      <td>-13.147826</td>
+      <td>...</td>
+      <td>-13.428696</td>
+      <td>-13.636522</td>
+      <td>-14.114783</td>
+      <td>-14.404783</td>
+      <td>-14.251304</td>
+      <td>-14.109565</td>
+      <td>-13.653913</td>
+      <td>-13.082174</td>
+      <td>-12.791739</td>
+      <td>-12.914783</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>-6.326957</td>
+      <td>-5.673043</td>
+      <td>-5.380870</td>
+      <td>-5.097391</td>
+      <td>-5.309130</td>
+      <td>-5.618261</td>
+      <td>-5.950000</td>
+      <td>-6.218696</td>
+      <td>-6.378696</td>
+      <td>-6.871304</td>
+      <td>...</td>
+      <td>-5.229565</td>
+      <td>-5.562174</td>
+      <td>-5.941304</td>
+      <td>-6.072609</td>
+      <td>-6.377391</td>
+      <td>-6.573043</td>
+      <td>-6.760870</td>
+      <td>-7.083478</td>
+      <td>-7.183913</td>
+      <td>-6.964348</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 178 columns</p>
+</div>
+
+
+
+
+```python
+Std
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>X3</th>
+      <th>X4</th>
+      <th>X5</th>
+      <th>X6</th>
+      <th>X7</th>
+      <th>X8</th>
+      <th>X9</th>
+      <th>X10</th>
+      <th>...</th>
+      <th>X169</th>
+      <th>X170</th>
+      <th>X171</th>
+      <th>X172</th>
+      <th>X173</th>
+      <th>X174</th>
+      <th>X175</th>
+      <th>X176</th>
+      <th>X177</th>
+      <th>X178</th>
+    </tr>
+    <tr>
+      <th>y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>342.361939</td>
+      <td>343.398782</td>
+      <td>337.489643</td>
+      <td>332.354833</td>
+      <td>332.211163</td>
+      <td>332.941638</td>
+      <td>332.899545</td>
+      <td>334.375084</td>
+      <td>334.534814</td>
+      <td>331.071853</td>
+      <td>...</td>
+      <td>342.095308</td>
+      <td>341.534693</td>
+      <td>345.740615</td>
+      <td>351.503084</td>
+      <td>351.184524</td>
+      <td>347.475865</td>
+      <td>339.650467</td>
+      <td>335.747017</td>
+      <td>335.244512</td>
+      <td>339.819309</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>95.525136</td>
+      <td>94.734737</td>
+      <td>93.716055</td>
+      <td>92.509248</td>
+      <td>91.004234</td>
+      <td>90.880780</td>
+      <td>91.679224</td>
+      <td>92.097291</td>
+      <td>91.138175</td>
+      <td>89.759109</td>
+      <td>...</td>
+      <td>92.959490</td>
+      <td>89.569320</td>
+      <td>86.961108</td>
+      <td>86.397728</td>
+      <td>87.752018</td>
+      <td>90.156202</td>
+      <td>92.433147</td>
+      <td>94.311338</td>
+      <td>96.013765</td>
+      <td>96.710559</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>59.924231</td>
+      <td>60.240543</td>
+      <td>59.905387</td>
+      <td>59.697773</td>
+      <td>59.502204</td>
+      <td>59.635346</td>
+      <td>60.043847</td>
+      <td>59.865027</td>
+      <td>59.463238</td>
+      <td>59.110605</td>
+      <td>...</td>
+      <td>60.209589</td>
+      <td>60.715733</td>
+      <td>60.541729</td>
+      <td>61.036980</td>
+      <td>60.658758</td>
+      <td>60.726974</td>
+      <td>60.273966</td>
+      <td>60.178156</td>
+      <td>59.736182</td>
+      <td>59.849148</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>69.729925</td>
+      <td>70.708016</td>
+      <td>71.425314</td>
+      <td>71.519947</td>
+      <td>71.055967</td>
+      <td>70.532877</td>
+      <td>70.027232</td>
+      <td>69.902928</td>
+      <td>69.674909</td>
+      <td>69.296696</td>
+      <td>...</td>
+      <td>70.359338</td>
+      <td>70.353789</td>
+      <td>70.441038</td>
+      <td>70.135134</td>
+      <td>69.881104</td>
+      <td>69.803366</td>
+      <td>69.846537</td>
+      <td>70.480867</td>
+      <td>70.720585</td>
+      <td>70.646346</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>47.553062</td>
+      <td>47.903503</td>
+      <td>48.135729</td>
+      <td>48.560703</td>
+      <td>48.568777</td>
+      <td>48.906275</td>
+      <td>49.121173</td>
+      <td>49.197125</td>
+      <td>48.996716</td>
+      <td>48.979947</td>
+      <td>...</td>
+      <td>47.512691</td>
+      <td>47.424105</td>
+      <td>47.793875</td>
+      <td>47.799416</td>
+      <td>47.660365</td>
+      <td>47.505155</td>
+      <td>47.687482</td>
+      <td>47.977213</td>
+      <td>48.238124</td>
+      <td>48.276043</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 178 columns</p>
+</div>
+
+
+
+
+```python
+# separating Class-1 data
+Class_1 = Mean[:1]
+```
+
+
+```python
+Class_1
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>X3</th>
+      <th>X4</th>
+      <th>X5</th>
+      <th>X6</th>
+      <th>X7</th>
+      <th>X8</th>
+      <th>X9</th>
+      <th>X10</th>
+      <th>...</th>
+      <th>X169</th>
+      <th>X170</th>
+      <th>X171</th>
+      <th>X172</th>
+      <th>X173</th>
+      <th>X174</th>
+      <th>X175</th>
+      <th>X176</th>
+      <th>X177</th>
+      <th>X178</th>
+    </tr>
+    <tr>
+      <th>y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>-21.936522</td>
+      <td>-19.04913</td>
+      <td>-15.293913</td>
+      <td>-9.836087</td>
+      <td>-3.707391</td>
+      <td>2.73</td>
+      <td>6.899565</td>
+      <td>7.425652</td>
+      <td>8.38087</td>
+      <td>10.773913</td>
+      <td>...</td>
+      <td>-7.266522</td>
+      <td>-9.714783</td>
+      <td>-15.909565</td>
+      <td>-22.383043</td>
+      <td>-26.424783</td>
+      <td>-26.221739</td>
+      <td>-25.83087</td>
+      <td>-25.043913</td>
+      <td>-24.548261</td>
+      <td>-24.016522</td>
+    </tr>
+  </tbody>
+</table>
+<p>1 rows × 178 columns</p>
+</div>
+
+
+
+
+```python
+Std_1 = Std[:1]
+```
+
+
+```python
+Std_1
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X1</th>
+      <th>X2</th>
+      <th>X3</th>
+      <th>X4</th>
+      <th>X5</th>
+      <th>X6</th>
+      <th>X7</th>
+      <th>X8</th>
+      <th>X9</th>
+      <th>X10</th>
+      <th>...</th>
+      <th>X169</th>
+      <th>X170</th>
+      <th>X171</th>
+      <th>X172</th>
+      <th>X173</th>
+      <th>X174</th>
+      <th>X175</th>
+      <th>X176</th>
+      <th>X177</th>
+      <th>X178</th>
+    </tr>
+    <tr>
+      <th>y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>342.361939</td>
+      <td>343.398782</td>
+      <td>337.489643</td>
+      <td>332.354833</td>
+      <td>332.211163</td>
+      <td>332.941638</td>
+      <td>332.899545</td>
+      <td>334.375084</td>
+      <td>334.534814</td>
+      <td>331.071853</td>
+      <td>...</td>
+      <td>342.095308</td>
+      <td>341.534693</td>
+      <td>345.740615</td>
+      <td>351.503084</td>
+      <td>351.184524</td>
+      <td>347.475865</td>
+      <td>339.650467</td>
+      <td>335.747017</td>
+      <td>335.244512</td>
+      <td>339.819309</td>
+    </tr>
+  </tbody>
+</table>
+<p>1 rows × 178 columns</p>
+</div>
+
+
+
+
+```python
+# Distribution of mean and standard deviation of class-1 (ictal data for epileptic cases)
+sns.distplot(Class_1)
+sns.distplot(Std_1)
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x20c14f60780>
+
+
+
+
+![png](output_44_1.png)
+
+
+
+```python
+# Separating mean values of other classes
+Class_2 = Mean[:2]
+Class_3 = Mean[:3]
+Class_4 = Mean[:4]
+Class_5 = Mean[:5]
+```
+
+
+```python
+# histograms of mean values 
+fig, axs = plt.subplots(2, 2, figsize=(5, 5))
+axs[0, 0].hist(Class_2)
+axs[1, 0].hist(Class_3)
+axs[0, 1].hist(Class_4)
+axs[1, 1].hist(Class_5)
+plt.show()
+```
+
+
+![png](output_46_0.png)
+
+
+
+```python
+sns.stripplot(data=Mean, jitter=True, palette='Set1')
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x20c18f93208>
+
+
+
+
+![png](output_47_1.png)
+
+
+
+```python
+sns.violinplot(data=Mean, palette='Set1')
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x20c1b9f98d0>
+
+
+
+
+![png](output_48_1.png)
+
