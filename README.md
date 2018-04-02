@@ -11,5 +11,5 @@ R code also shows Principal Component Analysis and GLMulti classification.
 A clustering and hirearchical clustering Python code is done to understand the class values of the data as published. 
 Python codes shows, Decision Tree, KNN, on selected features as well as on Principal components.
 Python code also shows XGBoost and Random Forest Classifiation on comparative classes.
-***********More work in Progress*************************
+
 ************Report in Progress***********************
