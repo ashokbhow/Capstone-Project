@@ -1,5 +1,5 @@
 # Capstone-Project 
-# A Machine Learning Approch to predict Epileptic Seizure from a multiclass epilepsy data 
+# A Machine Learning Application to predict Epileptic Seizure from a multiclass epilepsy data 
 # Python and R
 #
 This work is being carried out for the Capstone Project on a medical data of Electroencephalogram (EEG) records of Epileptic cases. 
