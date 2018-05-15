@@ -14,4 +14,4 @@ A clustering and hirearchical clustering Python code is done to understand the c
 Python codes shows, Decision Tree, KNN, on selected features as well as on Principal components.
 Python code also shows XGBoost and Random Forest Classifiation on comparative classes.
 
-************Report in Progress***********************
+# Report Included
