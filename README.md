@@ -1,17 +1,27 @@
 # Capstone-Project 
 # Subject: Machine Learning to predict Epileptic Seizure in a multiclass epilepsy data 
 # Codes: Python and R
-# Publication: Predictive Ananlytics in Healthcare: Epileptic Seizure Recognition, CASCON 2018, Oct 2018 proceedings (accepted)
-This work is being carried out for the Capstone Project on a medical data of Electroencephalogram (EEG) records of Epileptic cases. 
-The data has 178 feature and a class variable with 5 classes. 
-It has a total of 11500 instances.
-Class 1 represents epileptic or seizure cases while 2,3,4,5 are nonepileptic but various conditonal cases.
-Task: Machine learning / Clustering and Classification. 
-Source: UCI Machine Learning Repository.
-The R code shows processing of the data file, Logistic regression for feature selection.
-R code also shows Principal Component Analysis and GLMulti classification.
-A clustering and hirearchical clustering Python code is done to understand the class values of the data as published. 
-Python codes shows, Decision Tree, KNN, on selected features as well as on Principal components.
-Python code also shows XGBoost and Random Forest Classifiation on comparative classes.
+# Publication: Predictive Ananlytics in Healthcare: Epileptic Seizure Recognition 
+# CASCON 2018, Oct 2018 proceedings
 
-# Report On Request
+https://www-01.ibm.com/ibm/cas/cascon/papers.jsp
+
+Introduction: Clinical applications of electroencephalography (EEG)
+span a very broad range of diagnostic conditions. Epileptic seizure
+is the fourth most common neurological disorder in that. Related
+Work: There has been considerable progress in clinical understanding
+of epilepsy, however many aspects of seizure prevention are still
+a mystery. Predictive modeling of EEG can provide significant value
+addition to substantiate the diagnosis of epilepsy. Methodology:
+Machine learning algorithms are applied to predict the probability
+of epileptic seizure using an open source multi-class dataset. Results
+and Discussion: Comparing the F-score from different classifiers,
+it is found that XGBoost gives the best performance in binary
+classification and Random Forest provides the best performance
+in multinomial classification. Conclusion: Our results show that
+it is possible to predict epileptic seizure with significant accuracy
+from non-epileptic parameters using a suitable machine learning
+algorithm. We also observe that binary classification methods have
+higher prediction accuracy.
+
+
