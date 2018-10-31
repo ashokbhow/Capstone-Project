@@ -2,9 +2,9 @@
 # Subject: Machine Learning to predict Epileptic Seizure in a multiclass epilepsy data 
 # Codes: Python and R
 # Publication: Predictive Ananlytics in Healthcare: Epileptic Seizure Recognition 
-# CASCON 2018, Oct 2018 proceedings
+# CASCON 2018, Oct 2018 proceedings, page 323-330
 
-https://www-01.ibm.com/ibm/cas/cascon/papers.jsp
+https://www-01.ibm.com/ibm/cas/cascon/doc/CASCON2018_Proceeding.pdf
 
 Introduction: Clinical applications of electroencephalography (EEG)
 span a very broad range of diagnostic conditions. Epileptic seizure
