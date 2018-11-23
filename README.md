@@ -6,6 +6,8 @@
 
 https://www-01.ibm.com/ibm/cas/cascon/doc/CASCON2018_Proceeding.pdf
 
+https://dl.acm.org/citation.cfm?id=3291327
+
 Introduction: Clinical applications of electroencephalography (EEG)
 span a very broad range of diagnostic conditions. Epileptic seizure
 is the fourth most common neurological disorder in that. Related
